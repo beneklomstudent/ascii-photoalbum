@@ -9,7 +9,7 @@ end
 begin
     
 rescue => TypeError
-   "No image available" 
+   "Image file" 
 else
     
 end
