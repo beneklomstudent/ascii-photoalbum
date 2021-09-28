@@ -13,3 +13,10 @@ rescue => TypeError
 else
     
 end
+
+
+class asciiimage
+   def initialize imagearray
+      @imagearray = imagearray
+   end
+
