@@ -1,0 +1,6 @@
+    img = MiniMagick::Image.open 'image.jpg'
+    img.combine_options do |i|
+    i.dither.+
+    i.remap('9green.png')
+    i.resize("64x32!")
+end
