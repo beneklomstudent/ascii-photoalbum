@@ -1,3 +1,4 @@
+
 def img
 img = MiniMagick::Image.open ("images/image.bmp")
 img.resize('64x32!')
@@ -16,12 +17,11 @@ end
 def pixels
 pixels = img.get_pixels 
 end       
+
 def menu_query
-menu_query = gets.chomp
+@menu_query = gets.chomp
 end
-def menu_query2
-menu_query2 = gets.chomp
-end
+
 def pixel_output
 pixels.each do |sub_arrayY|             # Iterate from top to bottom
     sub_arrayY.each do |sub_arrayX|  # Iterate from left to right    
