@@ -5,17 +5,18 @@ load 'colormethod.rb'
 load 'blackandwhitemethod.rb'
 p "Welcome to the Ascii Photolab, with this application you can
 create ascii art from your own images!"
-p "Would you like the image to be in color or greyscale?"
-p "color"
-p "greyscale"
+p "Would you like to create or load an image??"
+p "create"
+p "load"
 
-if menu_query.include? "color" 
+if menu_query.include? "create" 
     puts "Loading image from file directory #{img}"
             pixels 
             pixel_output  
-elsif menu_query.include? "greyscale"
+elsif menu_query.include? "load"
+    img = YAML.load(File.read("savesimages.yml"))
     pixels
-    black_and_white
+    pixel output
 else puts "error reading input, please try again"
     end
 puts "Would you like to save your image?"
