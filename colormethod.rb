@@ -1,14 +1,15 @@
 require 'mini_magick'                  
 require 'rainbow'
 img = MiniMagick::Image.open 'image2.bmp'
-img.combine_options do |i|
-    i.fill "red"
-    i.posterize "2"
-    i.fill "green"
-    i.posterize "2"
-    i.fill "blue"
-    i.posterize "2"
-    i.resize("64x32!")
+img.resize('64x32!')
+img.remap('crunchy.bmp')
+# img.fill ('red')
+# img.posterize ('2')
+# img.fill ('green')
+# img.posterize ('2')
+# img.fill ('blue')
+# img.posterize ('2')
+
 pixels = img.get_pixels                 # Convert pixels to [R,G,B][X][Y] dimensional array
 pixels.each do |sub_arrayY|             # Iterate from top to bottom
     sub_arrayY.each do |sub_arrayX|  # Iterate from left to right    
