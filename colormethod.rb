@@ -1,5 +1,5 @@
 def img
-img = MiniMagick::Image.open ("image.bmp")
+img = MiniMagick::Image.open ("images/image.bmp")
 img.resize('64x32!')
 img.fill ('red')
 img.posterize ('2')
