@@ -1,9 +1,8 @@
 def get_text
-get_text = get.chomp
+get_text = gets.chomp
 end
 
-
-def open_image
+def img
 img = MiniMagick::Image.open 'image2.bmp'
 img.resize('64x32!')
 img.fill ('red')
@@ -14,7 +13,7 @@ img.fill ('blue')
 img.posterize ('2')
 end
 
-def pixel_grid
+def pixels
 pixels = img.get_pixels 
 end       
 
@@ -48,4 +47,5 @@ end
 end
 print "\n"                  
 
+end
 end

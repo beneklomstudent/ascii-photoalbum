@@ -4,9 +4,9 @@ load 'colormethod.rb'
 p "please insert image name"
 
 get_text
-open_image
-pixel_grid
-
+img
+pixels
+pixel_output
 
 # p "Please input file locations within the root folder"
 # p ImageData.gettext
