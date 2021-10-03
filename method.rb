@@ -3,8 +3,8 @@ require 'rainbow'
                                        # and imagemagick installed
 img = MiniMagick::Image.open 'image2.bmp'
 img.resize('128x64')
-# img.remap(imagecolor.bmp, dither=NoDitherMethod)
 pixels = img.get_pixels                 # Convert pixels to [R,G,B][X][Y] dimensional array
+ 
 pixels.each do |sub_arrayY|             # Iterate from top to bottom
     sub_arrayY.each do |sub_arrayX|     # Iterate from left to right
         case sub_arrayX.sum/3           #  evaluate (R+G+B) divided by 3 
