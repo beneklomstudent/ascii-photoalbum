@@ -1,14 +1,14 @@
-def magic_combine
+require 'mini_magick'                  
+require 'rainbow'
+img = MiniMagick::Image.open 'image.bmp'
 img.combine_options do |i|
+    i.resize("64x32!")
     i.fill "red"
     i.posterize "2"
     i.fill "green"
     i.posterize "2"
     i.fill "blue"
     i.posterize "2"
-    i.resize("64x32!")
-end
-def turn_into_array
 pixels = img.get_pixels                 # Convert pixels to [R,G,B][X][Y] dimensional array
 pixels.each do |sub_arrayY|             # Iterate from top to bottom
     sub_arrayY.each do |sub_arrayX|  # Iterate from left to right    
@@ -31,9 +31,9 @@ in [0..50, 100..255, 100..255]
     print Rainbow("@").darkblue
 in [200..255, 0..50, 200..255]
     print Rainbow("6").pink
-else print ("*")                  #   output a space
+else print ("*")              
 
 end
 end
-print "\n"                  
+end
 end
