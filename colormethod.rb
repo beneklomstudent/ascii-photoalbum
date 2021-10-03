@@ -1,9 +1,5 @@
-def get_text
-get_text = gets.chomp
-end
-
 def img
-img = MiniMagick::Image.open 'image2.bmp'
+img = MiniMagick::Image.open ("image.bmp")
 img.resize('64x32!')
 img.fill ('red')
 img.posterize ('2')
@@ -13,9 +9,25 @@ img.fill ('blue')
 img.posterize ('2')
 end
 
+def save_name
+save_name = gets.chomp
+end
+
+def menu_query
+menu_query = gets.chomp.lowercase
+end
+
+def menu_query2
+menu_query2 =gets.chomp.lowercase
+end
+
 def pixels
 pixels = img.get_pixels 
 end       
+
+
+def read_image
+
 
 def pixel_output
 pixels.each do |sub_arrayY|             # Iterate from top to bottom
