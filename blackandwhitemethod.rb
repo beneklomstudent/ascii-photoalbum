@@ -1,3 +1,5 @@
+
+
 def black_and_white
 pixels.each do |sub_arrayY|             
     sub_arrayY.each do |sub_arrayX|           

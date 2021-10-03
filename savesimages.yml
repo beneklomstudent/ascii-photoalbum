@@ -1,0 +1,12 @@
+--- !ruby/object:MiniMagick::Image
+path: "/tmp/mini_magick20211004-12965-uzmpj6.bmp"
+tempfile: !ruby/object:Tempfile
+  unlinked: false
+  mode: 194
+  tmpfile: &1 !ruby/object:File {}
+  opts:
+    :perm: 384
+  delegate_dc_obj: *1
+info: !ruby/object:MiniMagick::Image::Info
+  path: "/tmp/mini_magick20211004-12965-uzmpj6.bmp"
+  info: {}
