@@ -3,7 +3,6 @@ require 'rainbow'
 require 'yaml'
 load 'colormethod.rb'
  
- 
 p "Welcome to the Ascii Photolab, with this application you can
 create ascii art from your own images!"
  
