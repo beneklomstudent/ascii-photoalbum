@@ -4,12 +4,12 @@ require 'rainbow'
 img = MiniMagick::Image.open 'image2.bmp'
 img.resize('64x32!')
 img.remap('crunchy.bmp')
-# img.fill ('red')
-# img.posterize ('2')
-# img.fill ('green')
-# img.posterize ('2')
-# img.fill ('blue')
-# img.posterize ('2')
+img.fill ('red')
+img.posterize ('2')
+img.fill ('green')
+img.posterize ('2')
+img.fill ('blue')
+img.posterize ('2')
 
 =======
 def magic_combine
