@@ -13,29 +13,22 @@ def save_name
 save_name = gets.chomp
 end
 
-def menu_query
-menu_query = gets.chomp.lowercase
-end
-
-def menu_query2
-menu_query2 =gets.chomp.lowercase
-end
-
 def pixels
 pixels = img.get_pixels 
 end       
-
-
-def read_image
-
-
+def menu_query
+menu_query = gets.chomp
+end
+def menu_query2
+menu_query2 = gets.chomp
+end
 def pixel_output
 pixels.each do |sub_arrayY|             # Iterate from top to bottom
     sub_arrayY.each do |sub_arrayX|  # Iterate from left to right    
 case sub_arrayX 
-in [0..50,0..50,100..255]                      #  If 0-60, then output #
+in [0..50,0..50,100..255]                     
     print Rainbow("#").blue
-in [100..255,0..50,0..50]                    #  If 61-140, then output =
+in [100..255,0..50,0..50]                    #
     print Rainbow("=").red
 in [0..50,100..255,0..50]
     print Rainbow(".").green
