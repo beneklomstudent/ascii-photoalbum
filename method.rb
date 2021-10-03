@@ -1,7 +1,7 @@
 require 'mini_magick'                   # Also need a Gemfile
 require 'rainbow'
                                        # and imagemagick installed
-img = MiniMagick::Image.open 'imagecolor.bmp'
+img = MiniMagick::Image.open 'image2.bmp'
 img.resize('128x64')
 # img.remap(imagecolor.bmp, dither=NoDitherMethod)
 pixels = img.get_pixels                 # Convert pixels to [R,G,B][X][Y] dimensional array
