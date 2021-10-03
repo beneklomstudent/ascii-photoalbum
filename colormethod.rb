@@ -1,30 +1,24 @@
-<<<<<<< HEAD
-require 'mini_magick'                  
-require 'rainbow'
+def get_text
+get_text = get.chomp
+end
+
+
+def open_image
 img = MiniMagick::Image.open 'image2.bmp'
 img.resize('64x32!')
-img.remap('crunchy.bmp')
 img.fill ('red')
 img.posterize ('2')
 img.fill ('green')
 img.posterize ('2')
 img.fill ('blue')
 img.posterize ('2')
-
-=======
-def magic_combine
-img.combine_options do |i|
-    i.fill "red"
-    i.posterize "2"
-    i.fill "green"
-    i.posterize "2"
-    i.fill "blue"
-    i.posterize "2"
-    i.resize("64x32!")
 end
-def turn_into_array
->>>>>>> parent of c5ccea0 (unhappy with changes)
-pixels = img.get_pixels                 # Convert pixels to [R,G,B][X][Y] dimensional array
+
+def pixel_grid
+pixels = img.get_pixels 
+end       
+
+def pixel_output
 pixels.each do |sub_arrayY|             # Iterate from top to bottom
     sub_arrayY.each do |sub_arrayX|  # Iterate from left to right    
 case sub_arrayX 
@@ -40,19 +34,18 @@ in [255, 255, 255]
     print Rainbow("i").white
 in [100..254, 100..254, 100..254]
     print Rainbow("%").black
-in [100..255, 100..255, 0..50]
+in [200..255, 124..255, 0..50]
     print Rainbow("^").yellow
 in [0..50, 100..255, 100..255]
     print Rainbow("@").darkblue
 in [200..255, 0..50, 200..255]
     print Rainbow("6").pink
+in [100..255, 100..178, 0..50]
+    print Rainbow("#").orange
 else print ("*")                  #   output a space
 
 end
 end
 print "\n"                  
-<<<<<<< HEAD
-end
-=======
->>>>>>> parent of c5ccea0 (unhappy with changes)
+
 end

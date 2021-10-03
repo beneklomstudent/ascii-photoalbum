@@ -1,16 +1,13 @@
 require 'mini_magick'                  
 require 'rainbow'
-require 'colormethod'
+load 'colormethod.rb'
+p "please insert image name"
 
-class ImageData
-   attr_accessor :gettext, :downloadimage, :processimage, :arrayout
-def initialize(gettext, downloadimage, processimage, arrayout)
-@gettext = get.chomp
-@downloadimage = MiniMagick::Image.open gettext
-@processimage = magic_combine
-@arrayout = turn_into_array
-end 
-end
+get_text
+open_image
+pixel_grid
+
+
 # p "Please input file locations within the root folder"
 # p ImageData.gettext
 # p ImageData.downloadimage
